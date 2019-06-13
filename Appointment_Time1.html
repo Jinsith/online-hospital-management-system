@@ -1,0 +1,1233 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>P. D. Hinduja Hospital - Appointment with Doctors</title>
+<link href="../styles/styles.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<link href="../styles/jquery.datepick.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
+
+
+<script type="text/javascript" src="../js/jquery.datepick.js"></script>
+<script language="JavaScript" type="text/javascript" src="../ajaxscript/getHolidayAvailable.js"></script>
+
+
+<script src="../jQuery/scriptaculous/lib/prototype.js" type="text/javascript"></script>
+<script src="../jQuery/scriptaculous/src/effects.js" type="text/javascript"></script>
+<script type="text/javascript" src="../jQuery/validation.js"></script>
+
+</head>
+<body class="blueBgInner">
+<form method="post" action="/for-patients/appointments.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTMyNjY4ODIwMA9kFgICARBkZBYEAgcPZBYKAgEPEGQQFTQQU2VsZWN0IFNwZWNpYWx0eRlBZHVsdCBJbW11bmlzYXRpb24gQ2xpbmljB0FsbGVyZ3kOQW5lc3RoZXNpb2xvZ3kNQnJlYXN0IENhbmNlchNDYW5jZXIgQ2hlbW90aGVyYXB5GENhbmNlciBSYWRpYXRpb24gVGhlcmFweQ5DYW5jZXIgU3VyZ2VyeQ5DYW5jZXIgVXJvbG9neQpDYXJkaW9sb2d5I0NhcmRpb3Zhc2N1bGFyIGFuZCBUaG9yYWNpYyBTdXJnZXJ5EUNsaW5pY2FsIEdlbmV0aWNzHENsaW5pY2FsIEhhZW1hdG9sb2d5IGFuZCBCTVQUQ29sbGFnZW4gTHVuZyBDbGluaWMGRGVudGFsFURlbnRhbCBJbXBsYW50IENsaW5pYwtEZXJtYXRvbG9neRVEaWFiZXRpYyBGb290IFN1cmdlcnkNRW5kb2NyaW5vbG9neQNFTlQQR2FzdHJvZW50ZXJvbG9neRhHYXN0cm9lbnRlcm9sb2d5IFN1cmdlcnkQR2VuZXJhbCBNZWRpY2luZQ9HZW5lcmFsIFN1cmdlcnkLR3luYWVjb2xvZ3kHSW1hZ2luZxhJbnRlcnZlbnRpb25hbCBSYWRpb2xvZ3kTSVZGIGFuZCBJbmZlcnRpbGl0eQxMYWIgTWVkaWNpbmUWTWluaW1hbCBBY2Nlc3MgU3VyZ2VyeQpOZXBocm9sb2d5CU5ldXJvbG9neQxOZXVyb3N1cmdlcnkQTnVjbGVhciBNZWRpY2luZQ1PcGh0aGFsbW9sb2d5DE9ydGhvcGFlZGljcw9QYWluIE1hbmFnZW1lbnQUUGVkaWF0cmljIE5lcGhyb2xvZ3kTUGVkaWF0cmljIE5ldXJvbG9neR5QZWRpYXRyaWMgTmV1cm8tUmVoYWJpbGl0YXRpb24RUGVkaWF0cmljIFN1cmdlcnkKUGVkaWF0cmljcw1QaHlzaW90aGVyYXB5D1BsYXN0aWMgU3VyZ2VyeQpQc3ljaGlhdHJ5ElB1bG1vbmFyeSBNZWRpY2luZQxSaGV1bWF0b2xvZ3kYVG9iYWNjbyBDZXNzYXRpb24gQ2xpbmljFlRyYXZlbCBNZWRpY2luZSBDbGluaWMHVXJvbG9neRBWYXNjdWxhciBTdXJnZXJ5DFZ1bHZhIENsaW5pYxU0Ai0xAjc3ATMBMgI3NAIzMQIzMwIzMgI0OQE1ATYBNwIxOAI3MgE4AjY2ATkCMTUCMTECMTACMTICMTMCMjECMTQCMTYCMTkCMjACMjICMjMCMjUCMjYCMjcCMjkCMzACMzQCMzUCMzcCMzgCNDACMzkCNDECMzYCNDICNDMCNDQCNDUCNDcCNzACNzgCNDgCNjcCMTcUKwM0Z2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZxYBAgRkAgMPEGQQFQINU2VsZWN0IERvY3RvchFEci4gUnVjaGEgS2F1c2hpaxUCAi0xAzIyMBQrAwJnZxYBAgFkAgUPEGRkFgFmZAIJDxYCHgVzdHlsZQUNZGlzcGxheTpub25lO2QCCw8WAh8ABQ5kaXNwbGF5OmJsb2NrOxYEAgEPFgIeCWlubmVyaHRtbAWjBTx0YWJsZSB3aWR0aD0nMTAwJScgY2VsbHNwYWNpbmc9JzAnIGNlbGxwYWRkaW5nPScwJyBjbGFzcz0nZG9jVGJsJyBzdHlsZT0nbWFyZ2luLWJvdHRvbTo1cHgnPjx0Ym9keT48dHI+PHRoIHdpZHRoPScxNCUnPlJvb20gTm8uPC90aD48dGggd2lkdGg9JzE0JSc+TW9uZGF5PC90aD48dGggd2lkdGg9JzE0JSc+VHVlc2RheTwvdGg+PHRoIHdpZHRoPScxNCUnPldlZG5lc2RheTwvdGg+PHRoIHdpZHRoPScxNCUnPlRodXJzZGF5PC90aD48dGggd2lkdGg9JzE0JSc+RnJpZGF5PC90aD48dGggd2lkdGg9JzE0JSc+U2F0dXJkYXk8L3RoPjwvdHI+PHRyPjx0ZD4xMTA4PC90ZD48dGQ+MDk6MzAtMTQ6MzAgPGJyPiAtLSA8L2JyPjwvdGQ+PHRkPi0tIDxicj4gMTU6MDAtMTc6MzAgPC9icj48L3RkPjx0ZD4wOTozMC0xMTozMCA8YnI+IEYgMTE6MzAtMTM6MzAgPC9icj48L3RkPjx0ZD4wOTozMC0xMzozMCA8YnI+IC0tIDwvYnI+PC90ZD48dGQ+MDk6MzAtMTM6MzAgPGJyPiAtLSA8L2JyPjwvdGQ+PHRkPi0tIDxicj4gMTQ6MDAtMTY6MDAgPC9icj48L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPiA8cCBzdHlsZT0ncGFkZGluZy1ib3R0b206MTBweDtjb2xvcjojRkQ5RTVGO2ZvbnQtc2l6ZToxMXB4O3BhZGRpbmctbGVmdDogMTBweDsnPjxzdHJvbmc+Rjwvc3Ryb25nPiAtIEZyZWUgT1BEPC9wPmQCAw8WAh8BBdwFPHRhYmxlIHdpZHRoPScxMDAlJyBjZWxsc3BhY2luZz0nMCcgY2VsbHBhZGRpbmc9JzAnIGNsYXNzPSdkb2NUYmwnPjx0Ym9keT48dHI+PHRkIHdpZHRoPScxNSUnPjxpbWcgc3JjPScuLi9IYW5kbGVyLmFzaHg/SUQ9MjIwJyAgd2lkdGg9Jzg0cHgnIGhlaWdodD0nODRweCcgYWx0PSdEci4gUnVjaGEgS2F1c2hpaycvPjwvdGQ+PHRkIHdpZHRoPScyNSUnPjxzdHJvbmc+RHIuIFJ1Y2hhIEthdXNoaWs8L3N0cm9uZz48YnIgLz5NQkJTLCBNLlMuPC90ZD48dGQgc3R5bGU9J3dpZHRoOjM1JSc+PHN0cm9uZz5BcmVhcyBPZiBFeHBlcnRpc2U8L3N0cm9uZz48YnIgLz48dWw+DQoJPGxpPg0KCQlCcmVhc3QgQ2FuY2VyIFN1cmdlcnk8L2xpPg0KCTxsaT4NCgkJU3VyZ2VyeSBGb2xsb3dpbmcgTmVvLUFkanV2YW50IENoZW1vdGhlcmFweTwvbGk+DQoJPGxpPg0KCQlCcmVhc3QgUmVjb25zdHJ1Y3Rpb24gJmFtcDsgT25jb3BsYXN0eTwvbGk+DQoJPGxpPg0KCQlTZW50aW5lbCBMeW1waCBOb2RlIEJpb3BzeTwvbGk+DQo8L3VsPg0KPC90ZD48dGQ+PHN0cm9uZz5Db250YWN0IERldGFpbHM8L3N0cm9uZz48YnIvPkUtTWFpbCAtIDxhIGhyZWY9J21haWx0bzppbmZvQGhpbmR1amFob3NwaXRhbC5jb20nPmluZm9AaGluZHVqYWhvc3BpdGFsLmNvbTwvYT48YnIgLz5UZWwgLSAwMjIg4oCTIDI0NDQ5MTk5IC8gMjQ0NTIyMjIgLyAyNDQ1MTUxNTxiciAvPjwvdGQ+PC90cj48L3Rib2R5PjwvdGFibGU+ZAIJDxYCHwAFDmRpc3BsYXk6YmxvY2s7FgICGw8QZA8WAQJlFgEFBUluZGlhZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFEmltZ2J0bkNoZW5nZUNhcGNoZQUJYnRuU3VibWl0" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=bJGekwehsi7vy1naDFF-EuqrR-04kRaqmDkWkXJEIE9vWv6pXntDqMAxqLnvWfn7T9g87sYeTnzqzXvumw6kjYi_P4U1&amp;t=635792837982061497" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=BihUBrgrU765SAetVqAhBNgJzF1XurPEiPxeNc9RmtgYb_08cyR5ObPBYtq8X7dMYCXHxyOoV8FQe_a72QFHCkdPimmKEHsW265CUSN1yW-9NSdQP6bKXWq3zkJ_6SmxbZE5jK6JcKpUmgNRzpjj57VMkLsW8lgJahdz9jXS3xDm_xLc0&amp;t=72e85ccd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=YhTvgk9vRbdn1nO9_PNM2-5dh4RFf9xIDhF2axuBDY81tjcF1XUeEq3ceZnnMq2kiz0r_0YMhh2y2IJWB9wovmvTyCSSPga698xowN9og_VzfxenyqzC_seuGmHMToqWYgsIJTezFUF4MfhGXKocRS5DAu9LD_5H8mcCE6Cwhtb4AvC75EGslLQu2HY8V2UwWataeQ2&amp;t=72e85ccd" type="text/javascript"></script>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+<div class="wrap">
+  <!--Header Starts Here-->
+ <link rel="shortcut icon" type="image/x-icon" href="https://www.hindujahospital.com/images/favicon.ico"/>
+<script src="https://www.hindujahospital.com/ajaxscript/getDoctorDetails.js" type="text/javascript" defer="defer"></script>
+<script src="https://www.hindujahospital.com/ajaxscript/getSpecialityMenu.js" type="text/javascript"></script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-3450091-1', 'hindujahospital.com');
+    ga('send', 'pageview');
+
+</script>
+
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "url" : "https://www.hindujahospital.com/",
+  "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+912224449199",
+      "contactType" : "customer service"
+    } ] }
+</script>
+
+
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Hinduja Hospital",
+  "url" : "https://www.hindujahospital.com/",
+  "sameAs" : [ "http://www.facebook.com/HindujaHospital",
+    "http://twitter.com/wellnessmumbai",    
+"http://www.linkedin.com/company/hinduja-hospital",
+"http://www.youtube.com/user/HindujaHospitalMRC"]
+
+}
+</script>
+
+<input type="hidden" id="txtValue" />
+<div id="header">
+	<div class="topLinks">
+        <ul>
+            <li><a href="https://www.hindujahospital.com/">Home</a><span> |</span></li>
+            <li><a href="#">Online Services</a><span> |</span>
+                <ul class="sub-link">
+                    <li><a href="https://www.hindujahospital.com/for-patients/online-payment/index.html">Online Payment</a> <img src="https://www.hindujahospital.com/images/menu-offers.gif" width="80px" height="20px" align="absmiddle" /></li>
+                   <!-- <li><a href="https://www.hindujahospital.com/for-patients/diagnostic-report/">Online Report</a><img src="https://www.hindujahospital.com/images/menu-offers.gif" width="80px" height="20px" align="absmiddle" /></li>-->
+                    <li><a href="https://www.hindujahospital.com/for-patients/diagnostic-report/">Online Report</a></li>
+                    <li><a href="https://www.hindujahospital.com/for-patients/Online-Interim-Bills/">Online Interim Bill</a></li>
+                    <li><a href="https://www.hindujahospital.com/for-patients/healthcheck/">Online Health Check Medical History Form</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.hindujahospital.com/communityportal/events/">Events</a><span>|</span></li>
+            <!--<li><a href="http://www.livetogivehope.com/donate_online.html" target="_blank">Donate</a><span>|</span></li>-->
+            <li><a href="https://www.hindujahospital.com/livetogivehope/" target="_blank">Donate</a><span>|</span></li>
+            <li><a href="https://www.hindujahospital.com/sitemap.html">Sitemap</a> <span>|</span></li>
+            <li><a href="https://www.hindujahospital.com/contact-us/">Contact Us</a></li>
+    	</ul>
+    </div>
+    <div class="CL"></div>
+	<div class="logoBlock">
+		<div class="logoBlockInner">
+			<div class="logo FL">
+				<div itemscope itemtype="http://schema.org/Organization"> <a itemprop="url" href="https://www.hindujahospital.com/"> <img itemprop="logo" src="https://www.hindujahospital.com/images/hinduja-hospital-logo_1.png" border="0" alt="P. D. Hinduja Hospital Mumbai" /></a> </div>
+				<!--<div class="header-quality FL">
+          <a href="https://www.hindujahospital.com/about-us/nabh-accreditation.html" class="qlty1"></a>
+          <a href="https://www.hindujahospital.com/about-us/college-american-pathologists.html" class="qlty2"></a>
+          <a href="https://www.hindujahospital.com/about-us/haccp.html" class="qlty3"></a>
+          <a href="https://www.hindujahospital.com/about-us/iso.html" class="qlty4"></a>
+      </div>--> 
+			</div>
+			<!--<div class="FL yrs"><a  href="https://www.hindujahospital.com/"><img src="https://www.hindujahospital.com/images/60-yrs.gif" alt="Quality Health Care - 60 Years" width="165" height="70"  border="0" title="Quality Health Care - 60 Years"/></a></div>-->
+			<div class="search FR">
+				<div class="colLeft FL"> <a href="javascript:void(0)" onclick="DocOrHinduja(1)" id="divDocOrHinduja1">Doctors</a> <a href="javascript:void(0)" class="deactive" onclick="DocOrHinduja(2)" id="divDocOrHinduja2">Other</a> </div>
+				<div id="divShowDoc">
+					<div class="colRight FL">
+						<input type="text" class="txtBox" id="txtDoctorDetails" value="Search by Name" onblur="defaultText3_new()" onfocus="defaultText4_new()" />
+						<div class="searchPopup displayNoneheight" id="divDoctorDetailsMainContainer" onmouseover="divDoctorDetailsMainMouseOver()" onmouseout="divDoctorDetailsMainMouseOut()">
+							<div  id="divDoctorDetailsMain" class="displayNone"> </div>
+						</div>
+					</div>
+				</div>
+				<div id="divShowHinduja" class="displayNone">
+					<div class="colRight FL">
+						<input type="text" class="txtBox" id="txtSearchHinduja" value="Search by Keyword"  onfocus="onfocusvalueSrchHinduja();" onblur="defaultvalueSrchHinduja();"/>
+					</div>
+					<div class="FL"><a href="javascript:void(0)" onclick="callsearch()"><img src="https://www.hindujahospital.com/images/search-btn.gif" alt="Search" border="0"/></a></div>
+				</div>
+				<div class="CL"></div>
+			</div>
+			<div class="CL"></div>
+		</div>
+	</div>
+	<!--Menu STARTS HERE-->
+	<div class="menu">
+		<ul id="menu">
+			<!--<li id="menu1"  class="topmenu"><a  href="https://www.hindujahospital.com/">Home</a> </li>-->
+			<li id="menu2"  class="topmenu"><a href="https://www.hindujahospital.com/about-us/index.html">About Us</a>
+				<div class="subMenu" >
+					<div class="subMenuColoumn FL paddingL8 width200">
+						<ul>
+							<li><a href="https://www.hindujahospital.com/about-us/founder.html">The Founder</a></li>
+							<li><a href="https://www.hindujahospital.com/about-us/inspiration.html">The Inspiration</a></li>
+							<li><a href="https://www.hindujahospital.com/about-us/hinduja-through-ages.html">Hinduja Through the Ages</a></li>
+							<li><a href="https://www.hindujahospital.com/about-us/guiding-principles.html">Our Guiding Principles</a></li>
+							<li><a href="https://www.hindujahospital.com/about-us/quality-healthcare.html">Accreditation</a></li>
+							<li><a href="https://www.hindujahospital.com/about-us/awards.html">Awards</a></li>
+							<li><a href="https://www.hindujahospital.com/about-us/milestones.html">Milestones</a></li>
+							<li><a href="https://www.hindujahospital.com/about-us/management.html">Board of Management</a></li>
+							<li><a href="https://www.hindujahospital.com/about-us/super-achiever/rajaram-bhalerao.html">Super Achievers</a></li>
+						</ul>
+					</div>
+					<div class="subMenuColoumn FL width360">
+						<div>
+							<div class="subHead FL">Quality Healthcare</div>
+							<div class="CL"></div>
+						</div>
+						<p>The quality of a leader is best understood from the standard he sets for himself</p>
+						<div class="awardIcons">
+							<div class="col FL psaddingL0" style="width:141px;">
+								<div class="awardImg FL" style="width:96px;margin-right:5px;"><a href="https://www.hindujahospital.com/about-us/haccp.html"><img src="https://www.hindujahospital.com/images/dnvtop.jpg" alt="HACCP" width="96" height="78" border="0" align="top" title="HACCP"  /></a></div>
+								<div style="float:right; color:#FFF; font-size:11px;">HACCP</div>
+							</div>
+							<div class="col FL paddingL0" style="width:164px;">
+								<div class="awardImg FL" style="margin-right:6px; width:96px;"> <a href="https://www.hindujahospital.com/about-us/iso.html"><img src="https://www.hindujahospital.com/images/iso-top.jpg" alt="ISO 27001: 2005 Certification" title="ISO 27001: 2005 Certification" width="96" height="78" border="0"  /></a></div>
+								<div class="awardDesc" style="padding:0px;">
+									<blockquote>
+										<p>ISO 27001: <br />
+											2005 Certification</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="CL"></div>
+							<div style="padding-top:10px">
+								<div class="col FL paddingL0" style="width:140px;">
+									<div class="awardImg FL" style="width:96px;margin-right:5px;margin-left:5px;"><a href="https://www.hindujahospital.com/about-us/college-american-pathologists.html"><img src="https://www.hindujahospital.com/images/s-cap.jpg" alt="College American Pathologists" title="College of American Pathologists" width="96" height="78" border="0" /></a></div>
+									<div style="float:left; color:#FFF; font-size:11px;">CAP</div>
+								</div>
+								<div class="col FL paddingL0" style="width:170px;">
+									<div class="awardImg FL" style="margin-right:5px; margin-left:5px;width:96px;"> <a href="https://www.hindujahospital.com/about-us/nabh-accreditation.html"><img src="https://www.hindujahospital.com/images/s-nabh.jpg" alt="NABH Accreditation" width="96" height="78" border="0" title="NABH Accreditation" /></a></div>
+									<div style="float:right; color:#FFF; font-size:11px;">NABH <br />
+										Accreditation</div>
+								</div>
+								<div class="CL"></div>
+							</div>
+						</div>
+					</div>
+					<div class="subMenuColoumn FL paddingR0 width290">
+						<div class="subHead">Super Achievers</div>
+						<div class="awardIcons">
+							<div class="col1 FL"><img src="https://www.hindujahospital.com/images/dr-rbhalerao.jpg" width="96" height="96" border="0" alt="Dr. Rajaram Amrut Bhalerao" title="Dr. Rajaram Amrut Bhalerao" /></div>
+							<div class="col2 FL">
+                <div class="subsubHead">Dr. Rajaram Amrut Bhalerao</div>
+                <p>Advisor to Trustees on Strategy & Medical Planning</p>
+                <a class="viewMore" href="https://www.hindujahospital.com/about-us/super-achiever/rajaram-bhalerao.html">View More</a></p>
+              </div>
+							<div class="CL"></div>
+						</div>
+					</div>
+					<div class="CL"></div>
+				</div>
+			</li>
+			<li id="menu3"  class="topmenu"><a href="https://www.hindujahospital.com/for-patients/">For Patients</a>
+				<div class="subMenu">
+					<div class="subMenuColoumn FL paddingL8 width330 paddingB35">
+						<ul>
+							<li><strong>Specialities</strong></li>
+						</ul>
+						<div class="CL"></div>
+						<div>
+							<div id="divMenuSpecialityOnTop"></div>
+							<div class="submenuVeiw FR AR" style=' margin-top:5px' ><a href="https://www.hindujahospital.com/for-patients/specialities.aspx">View All Specialities</a></div>
+						</div>
+						<div class="FL" style="padding-top:15px;">
+							<ul>
+								<li><strong><a href="https://www.hindujahospital.com/for-patients/specialty-clinic.html">Specialty Clinics</a></strong></li>
+							</ul>
+							<div class="speciality01">
+								<ul>                                    
+									<li><a href="https://www.hindujahospital.com/for-patients/specialty-clinic.html">Lupus Clinic</a></li>
+                                    <li><a href="https://www.hindujahospital.com/Speciality/breast-cancer/">Breast Cancer</a></li>
+									<li><a href="https://www.hindujahospital.com/for-patients/vulva-clinic.html" >Vulva Clinic</a></li>
+                                    
+                                    <li><a href="https://www.hindujahospital.com/Speciality/tobacco-cessation-clinic/">Tobacco Cessation Clinic</a></li>
+									<li><a href="https://www.hindujahospital.com/Speciality/diabetic-foot-surgery/15/" >Diabetic Foot Clinic</a></li>
+									<!--li><a href="https://www.hindujahospital.com/for-patients/lipid-clinic.html">Lipid Clinic</a></li>
+                <li><a href="https://www.hindujahospital.com/Speciality/geriatric-clinic/">Geriatric Clinic</a></li-->
+									<li><a href="https://www.hindujahospital.com/Speciality/dental-implant-clinic/">Dental Implant Clinic</a></li>
+                                    <li><a href="https://www.hindujahospital.com/Speciality/collagen-lung-clinic/">Collagen and Lung Clinic</a></li>
+                                   
+								</ul>
+							</div>
+							<div class="CL"></div>
+						</div>
+					</div>
+					<div class="subMenuColoumn FL width260">
+						<div class="borderBtm paddingT0">
+							<ul>
+								<li><strong><a target="_blank" href="https://www.hindujahospital.com/preventive-healthcare/index.html">Preventive Healthcare</a></strong></li>
+							</ul>
+							<div class="CL"></div>
+						</div>
+						<div class="borderBtm">
+							<ul>
+								<li><a href="https://www.hindujahospital.com/for-patients/care-home.html">Care@home</a></li>
+								<li><a href="https://www.hindujahospital.com/sss/" target="_blank">Short Stay Service</a></li>
+								<li><a href="https://www.hindujahospital.com/for-patients/poisoncentre.aspx">Poison Centre</a></li>
+							</ul>
+							<div class="CL"></div>
+						</div>
+						<div class="borderBtm paddingB5">
+							<ul>
+								<li><a href="https://www.hindujahospital.com/for-patients/inpatients.html">For Inpatients</a></li>
+								<li><a href="https://www.hindujahospital.com/for-patients/outpatients.html">For Outpatients</a></li>
+							</ul>
+							<div class="CL"></div>
+						</div>
+					</div>
+					<div class="subMenuColoumn FL width270 paddingR0">
+						<div class="borderBtm paddingT0">
+							<ul>
+								<li><a href="https://www.hindujahospital.com/for-patients/whats-new-at-hh.aspx">What's New at P. D. Hinduja Hospital</a></li>
+								<li><a href="https://www.hindujahospital.com/for-patients/emergency-services.html">Emergency Services</a></li>
+								<li><a href="https://www.hindujahospital.com/for-patients/schedule.aspx">Doctors' Schedule</a></li>
+								<li><a href="https://www.hindujahospital.com/for-patients/school-health-services.html">School Health Services</a></li>
+								<li><a href="https://www.hindujahospital.com/for-patients/medical-insurance-tpa.html">Medical Insurance &amp; TPA Services </a></li>
+								<li><a href="https://www.hindujahospital.com/for-patients/testimonials.aspx">Testimonials</a></li>
+								<li><a href="https://www.hindujahospital.com/for-patients/tell-us-how-we-fared.aspx">Tell Us How We Fared</a></li>
+								<li><a href="https://www.hindujahospital.com/for-patients/downloads.aspx">Free Downloads</a></li>
+								<li><a href="https://www.hindujahospital.com/communityportal/publicevents/public-events.aspx" target="_blank">Public Education Series</a></li>								
+								<li><a target="_blank" href="https://www.hindujahospital.com/for-patients/online-payment-hinduja-clinic/">Online Payment Services</a></li>
+								<li><a target="_blank" href="https://www.hindujahospital.com/for-patients/diagnostic-report/">Online Report Services</a></li>
+                                <li><a target="_blank" href="https://www.hindujahospital.com/for-patients/Online-Interim-Bills/">Online Interim Bill</a></li>
+                                <li><a href="https://www.hindujahospital.com/pdf/patient-registration-form.pdf" target="_blank">Patient Registration Form</a></li>
+                                <li><a href="https://www.hindujahospital.com/for-patients/healthcheck/">Online Health Check Medical History Form</a></li>
+                                <li><a href="https://www.hindujahospital.com/for-patients/bmi-calculator.html">BMI Calculator</a></li>
+							</ul>
+							<div class="CL"></div>
+						</div>
+						<div class="submenuVeiw appointmentWithDoctors"><a href="https://www.hindujahospital.com/for-patients/appointments.aspx">Doctors Appointment</a></div>
+					</div>
+					<div class="CL"></div>
+				</div>
+			</li>
+			<li id="menu4"  class="topmenu"><a href="https://www.hindujahospital.com/special-services/">Special Services</a>
+				<div class="subMenu">
+					<div class="subMenuColoumn FL width150"> <a href="https://www.hindujahospital.com/special-services/index.html"><img width="181" border="0" height="141" title="Surgical Solutions Obesity" alt="Surgical Solutions Obesity" src="https://www.hindujahospital.com/images/sso-logo.gif"> <br />
+						<strong>Surgical Solutions <br/>
+						for Obesity</strong></a> </div>
+					<div class="subMenuColoumn FL width150"> <a href="https://www.hindujahospital.com/special-services/ivf-excellence.html"><img width="156" border="0" height="141" title="IVF" alt="IVF" src="https://www.hindujahospital.com/images/ivf-logo.gif"> <br />
+						<strong>Hinduja IVF Centre</strong></a> </div>
+					<div class="subMenuColoumn FL width150"> <a href="https://www.hindujahospital.com/special-services/sss-excellence.html"><img width="155" border="0" height="141" title="Short Stay Services" alt="Short Stay Services" src="https://www.hindujahospital.com/images/sss-logo.gif"> <br />
+						<strong>Short Stay Service</strong></a> </div>
+					<div class="subMenuColoumn FL width150"> <a href="https://www.hindujahospital.com/special-services/preventive-excellence.html"><img width="191" border="0" height="141" title="Secure Your Wealth" alt="Secure Your Wealth" src="https://www.hindujahospital.com/images/preventive-logo.gif"> <br />
+						<strong>Secure Your Health</strong></a> </div>
+					<div class="subMenuColoumn FL width150"> <a href="https://www.hindujahospital.com/special-services/care-excellence.html"><img width="170" border="0" height="141" title="Care at home" alt="Care at home" class="last" src="https://www.hindujahospital.com/images/care-logo.gif"> <br />
+						<strong>Care@ Home</strong></a> </div>
+					<div class="CL"></div>
+				</div>
+			</li>
+			<li id="menu5"  class="topmenu"><a href="https://www.hindujahospital.com/for-professionals/">For Proffesionals</a>
+				<div class="subMenu">
+					<div class="subMenuColoumn FL forDoctors">
+						<div class="borderBtm borderBtmfor" >
+							<ul>
+								<li><strong>For Doctors</strong></li>
+							</ul>
+							<div class="speciality01">
+								<ul>
+									<li><a href="https://www.hindujahospital.com/communityportal/events/current-events.aspx" target="_blank">Medical Events &amp; Conferences</a></li>
+									<li><a href="https://www.hindujahospital.com/for-doctors/research.html">Medical Education &amp; Research</a></li>
+									<li><a href="https://www.hindujahospital.com/for-doctors/infertility-training-program.html">Infertility Training Program</a></li>
+                                    <li><a href="https://www.hindujahospital.com/for-doctors/fellowhsip-ivf.html">Fellowship in IVF</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="borderBtm borderBtmPb">
+							<ul>
+								<li><a href="https://www.hindujahospital.com/nursing/index.html"><strong>Nursing at P. D. Hinduja Hospital </strong></a></li>
+							</ul>
+							<div class="speciality01">
+								<ul>
+									<li><a href="https://www.hindujahospital.com/nursing/overview.html">Overview</a></li>
+									<li><a href="https://www.hindujahospital.com/nursing/learning-initiatives.html">Learning Initiatives</a></li>
+									<li><a href="https://www.hindujahospital.com/nursing/nursing-specialities.html">Nursing Specialties</a></li>
+									<li><a href="https://www.hindujahospital.com/nursing/nursing-events.html">Events</a></li>
+									<li><a href="https://www.hindujahospital.com/nursing/photo-gallery.html">Photo Gallery</a></li>
+									<li><a href="https://www.hindujahospital.com/nursing/work-with-us.html">Work with Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="subMenuColoumn FL subMenuColoumnPb">
+						<ul>
+							<li><a href="https://www.hindujahospital.com/college-of-nursing/index.html"><strong>P. D. Hinduja Hospital &amp; Medical Research Centre College of Nursing</strong></a></li>
+						</ul>
+						<div class="CL"></div>
+						<div class="speciality01">
+							<ul class="rSpace">
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/message-from-principal-desk.html">Message from Principal's Desk</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/history.html">History</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/mission.html">Mission, Vision &amp; Values</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/our-goals.html">Our Goals</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/bsc-nursing.html">B.Sc. Nursing</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/msc-nursing.html">M.Sc. Nursing</a></li>
+                                <!--<li><a href="https://www.hindujahospital.com/college-of-nursing/admission.html">Admissions for  Nursing 2015-16</a></li>-->
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/research.html">Research</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/teaching-faculty.html">Teaching Faculty</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/news-events.html">News and Events</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/alumni-association.html">Alumni Association</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/photo-gallery.html">Photo Gallery</a></li>
+								<li><a href="https://www.hindujahospital.com/college-of-nursing/contact-details.html">Contact Details</a></li>
+							</ul>
+						</div>
+						<div class="CL"></div>
+					</div>
+					<div class="subMenuColoumn FL subMenuColoumnWPrb">
+						<ul>
+							<li style="padding-bottom:14px;"><a href="https://www.hindujahospital.com/for-professionals/academics.html"><strong>Allied Health Science Courses</strong></a></li>
+						</ul>
+						<div class="CL"></div>
+						<div class="speciality01 borderBtm">
+							<ul>
+								<li><a href="https://www.hindujahospital.com/for-professionals/academics.html">Full Time / Part Time Courses</a></li>
+								<!--<li><a href="https://www.hindujahospital.com/for-professionals/part-time-course.html">Part-Time Courses</a></li>-->
+                                <li><a href="https://www.hindujahospital.com/for-professionals/allied-health/index.html" target="_blank">Student Placement Brochure (2015-16)</a></li>
+							</ul>
+						</div>
+					</div>
+                    <div class="subMenuColoumn FL subMenuColoumnWPrb">
+						<ul style="padding-top:14px;">
+							<li><a href="https://www.hindujahospital.com/for-professionals/memp.html"><strong>Masters in Emergency Medicine </strong></a></li>
+						</ul>
+						<div class="CL"></div>
+						
+					</div>
+					<div class="CL"></div>
+				</div>
+			</li>
+			<li id="menu6"  class="topmenu"><a href="https://www.hindujahospital.com/careers/" >Careers</a> </li>
+			<li id="menu7"  class="topmenu"><a href="https://www.hindujahospital.com/communityportal/index.aspx" target="_blank">Community Portal</a>
+				<!--<div class="subMenu">
+					<div class="subMenuColoumn FL width132"> <a href="https://www.hindujahospital.com/communityportal/articles/"><img width="86" border="0" height="62" title="Articles" alt="Articles" 
+            src="https://www.hindujahospital.com/images/community-portal/articles.png"> <br />
+						<strong class="font">Articles</strong></a> </div>
+					<div class="subMenuColoumn FL width132"> <a href="https://www.hindujahospital.com/communityportal/blogs/"><img width="86" border="0" height="62" title="Blogs" alt="Blogs" 
+            src="https://www.hindujahospital.com/images/community-portal/blogs.png"> <br />
+						<strong class="font">Blogs</strong></a> </div>
+					<div class="subMenuColoumn FL width132"> <a href="https://www.hindujahospital.com/communityportal/discussions/"><img width="86" border="0" height="62" title="Discussions" alt="Discussions" 
+            src="https://www.hindujahospital.com/images/community-portal/discussions.png"> <br />
+						<strong class="font">Discussions</strong></a> </div>
+					<div class="subMenuColoumn FL width132"> <a href="https://www.hindujahospital.com/communityportal/resources/"><img width="86" border="0" height="62" title="Resources" alt="Resources" 
+            src="https://www.hindujahospital.com/images/community-portal/resources.png"> <br />
+						<strong class="font">Resources</strong></a> </div>
+					<div class="subMenuColoumn FL width132"> <a href="https://www.hindujahospital.com/communityportal/videos/"><img width="86" border="0" height="62" title="Videos" alt="Videos" 
+            src="https://www.hindujahospital.com/images/community-portal/videos.png"> <br />
+						<strong class="font">Videos</strong></a> </div>
+					<div class="subMenuColoumn FL width132 last"> <a href="https://www.hindujahospital.com/communityportal/podcasts/"><img width="86" border="0" height="62" title="Podcasts" alt="Podcasts" class="last" 
+            src="https://www.hindujahospital.com/images/community-portal/podcasts.png"> <br />
+						<strong class="font">Podcasts</strong></a> </div>
+					<div class="CL"></div>
+				</div>-->
+			</li>
+			<li id="menu8"  class="topmenu"><a onclick="gotoLGH()" href="https://www.hindujahospital.com/livetogivehope/" target="_blank">Live To Give Hope</a></li>
+		</ul>
+		<div id="commonLinks">
+			<div class="icons" id="icons">
+				<ul>
+					<li class="bookmark" id="icons1"><a href="javascript:MeBook()">Bookmark</a></li>
+					<li class="mail" id="icons2"><a href="javascript:void(0)" rel="#mail">Mail</a></li>
+					<li class="print" id="icons3"><a onclick="window.print()" href="javascript:void(0)">Print</a></li>
+					<li class="minus" id="icons4"><a id="decFont" href="javascript:void(0)" class="opcity100">Minus</a></li>
+					<li class="reset" id="icons5"><a id="resetFont" href="javascript:void(0)" class="opcity100">Reset</a></li>
+					<li class="plus" id="icons6"><a id="incFont" href="javascript:void(0)" class="opcity100">Plus</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--Menu ENds Here--> 
+</div>
+<div class="overlay" id="mail"><a class="close"></a>
+	<div class="overlayInner height600">
+		<div class="overlayInnerTop frm">
+			<div id="divSendToFriend"  class="download">
+				<h4 class="formHead">Send To friend</h4>
+				<div class="formFld">
+					<label class="w88">Friend Name <span class="red">*</span></label>
+					<input id="txtFriendName" name="txtFriendName" type="text" maxlength="50" />
+					<div id="advice-required-txtFriendName" class="custom-advice customAdviceDpl">Please type in Friend Name</div>
+					<div id="advice-validate-alpha-txtFriendName" class="custom-advice customAdviceDpl">Please enter only Characters </div>
+				</div>
+				<div class="CL" > </div>
+				<div class="formFld">
+					<label class="w88">Friend Email <span class="red">*</span></label>
+					<input id="txtFriendEmail" type="text" name="txtFriendEmail"  maxlength="50" />
+					<div id="advice-required-txtFriendEmail" class="custom-advice customAdviceDpl">Please type in Friend Email</div>
+					<div id="advice-validate-email-txtFriendEmail" class="custom-advice customAdviceDpl">Please enter a valid EmailID</div>
+				</div>
+				<div class="formFld">
+					<label class="w88">Your Name <span class="red">*</span></label>
+					<input id="txtYourName" name="txtYourName" type="text" maxlength="50" />
+					<div id="advice-required-txtYourName" class="custom-advice customAdviceDpl">Please type in Your Name</div>
+					<div id="advice-validate-alpha-txtYourName" class="custom-advice customAdviceDpl">Please enter only Characters </div>
+				</div>
+				<div class="formFld">
+					<label class="w88">Your Email <span class="red">*</span></label>
+					<input id="txtYourEmail" type="text" name="txtYourEmail" maxlength="50" />
+					<div id="advice-required-txtYourEmail" class="custom-advice customAdviceDpl">Please type in Your Email</div>
+					<div id="advice-validate-email-txtYourEmail" class="custom-advice customAdviceDpl">Please enter a valid EmailID</div>
+				</div>
+				<div class="SendToFriendbtn">
+					<input id="btnSubmitSendToFriend" type="submit" class="btnSbmt btnSbmtTextIndent" onclick="return SendToFriendValidation();"/>
+					<iframe id="ifrmSendToFriend" name="ifrmSendToFriend" frameborder="0" height="0" width="0"></iframe>
+				</div>
+			</div>
+			<div id="ThankuSendToFriend" class="SendToFriend">
+				<h4 class="formHead">Thank You</h4>
+				<div class="padLR"> Thank you for submitting your feedback. We shall revert to you shortly. <br />
+					<br />
+					<a href="javascript:void(0);" class="btnBack" onclick="HideDivSendToFriend();backSendToFriend();">Back</a> </div>
+			</div>
+		</div>
+		<div class="overlayInnerBtm">&nbsp;</div>
+	</div>
+</div>
+<script type="text/javascript">
+    function gotoLGH() {
+        _gaq.push(['_trackEvent', 'outbound', 'link', 'livetogivehope']);
+    }
+
+
+</script>
+  <!--Header Ends Here-->
+  <!--BREACRUMS-->
+   <div id="breadcrums">
+  	<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://www.hindujahospital.com/"><span itemprop="title">Home</span></a></div> &gt; 
+    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="index.html"><span itemprop="title">For Patients</span></a></div> &gt; 
+    Take an Appointment</div>
+  <!--Main Content Starts Here-->
+  <div class="mainContent">
+    <h1 class="forPatients">For Patients</h1>
+    <div class="content">
+      <div class="textArea" style="width:920px">
+	
+        <h2>Take an Appointment</h2>
+        <p class="topInset">Please fill in the details below to schedule an appointment </p>
+		<div style="background:url(../images/white-bg-big.gif) no-repeat #FFFFFF; padding:15px 18px 0 18px">
+			
+				
+	<div id="divthankmsg" style="display:none;height:450px;">
+		  <h4 class="fullForm">Thank You</h4>			
+ 
+		 <div class="padLR">
+            Thank you. We shall revert to you shortly.<br /><br />
+            <a id="lnkBtnBack" class="btnBack" href="javascript:__doPostBack(&#39;lnkBtnBack&#39;,&#39;&#39;)">Back</a>
+	    </div> 
+		
+    </div>	
+			
+            
+    
+	<div id="divDocdetails" style="padding:0 20px 0 20px"> 
+	
+	<h4 class="fullForm" style="padding:0;margin-left:0;">Select Your Doctor</h4>
+        <div class="frm" style="padding-bottom:10px">
+          <div class="frmcolm">
+          		  <div class="fullformFld">
+            <label class="w350">Select Specialty <span class="red">*</span></label>
+       <select name="ddlSpeciality" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ddlSpeciality\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlSpeciality" style="width:250px;">
+	<option value="-1">Select Specialty</option>
+	<option value="77">Adult Immunisation Clinic</option>
+	<option value="3">Allergy</option>
+	<option value="2">Anesthesiology</option>
+	<option selected="selected" value="74">Breast Cancer</option>
+	<option value="31">Cancer Chemotherapy</option>
+	<option value="33">Cancer Radiation Therapy</option>
+	<option value="32">Cancer Surgery</option>
+	<option value="49">Cancer Urology</option>
+	<option value="5">Cardiology</option>
+	<option value="6">Cardiovascular and Thoracic Surgery</option>
+	<option value="7">Clinical Genetics</option>
+	<option value="18">Clinical Haematology and BMT</option>
+	<option value="72">Collagen Lung Clinic</option>
+	<option value="8">Dental</option>
+	<option value="66">Dental Implant Clinic</option>
+	<option value="9">Dermatology</option>
+	<option value="15">Diabetic Foot Surgery</option>
+	<option value="11">Endocrinology</option>
+	<option value="10">ENT</option>
+	<option value="12">Gastroenterology</option>
+	<option value="13">Gastroenterology Surgery</option>
+	<option value="21">General Medicine</option>
+	<option value="14">General Surgery</option>
+	<option value="16">Gynaecology</option>
+	<option value="19">Imaging</option>
+	<option value="20">Interventional Radiology</option>
+	<option value="22">IVF and Infertility</option>
+	<option value="23">Lab Medicine</option>
+	<option value="25">Minimal Access Surgery</option>
+	<option value="26">Nephrology</option>
+	<option value="27">Neurology</option>
+	<option value="29">Neurosurgery</option>
+	<option value="30">Nuclear Medicine</option>
+	<option value="34">Ophthalmology</option>
+	<option value="35">Orthopaedics</option>
+	<option value="37">Pain Management</option>
+	<option value="38">Pediatric Nephrology</option>
+	<option value="40">Pediatric Neurology</option>
+	<option value="39">Pediatric Neuro-Rehabilitation</option>
+	<option value="41">Pediatric Surgery</option>
+	<option value="36">Pediatrics</option>
+	<option value="42">Physiotherapy</option>
+	<option value="43">Plastic Surgery</option>
+	<option value="44">Psychiatry</option>
+	<option value="45">Pulmonary Medicine</option>
+	<option value="47">Rheumatology</option>
+	<option value="70">Tobacco Cessation Clinic</option>
+	<option value="78">Travel Medicine Clinic</option>
+	<option value="48">Urology</option>
+	<option value="67">Vascular Surgery</option>
+	<option value="17">Vulva Clinic</option>
+
+</select>
+          </div>
+</div>
+		             <div class="frmcolm" >
+					 <div class="fullformFld">
+            <label class="w350">Select Your Doctor <span class="red">*</span></label>
+            <select name="ddlDoctorList" onchange="showLoader();setTimeout(&#39;__doPostBack(\&#39;ddlDoctorList\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlDoctorList" class="required" style="width:200px;">
+	<option value="-1">Select Doctor</option>
+	<option selected="selected" value="220">Dr. Rucha Kaushik</option>
+
+</select>
+            
+            <div id="advice-required-ddlDoctorList" class="custom-advice" style="display: none;padding:0px;">Please Select Doctor</div>
+            
+			</div>
+            
+            </div>
+		      <div class="frmcolm" style="width:280px;display:none;">       
+            <div class="fullformFld">
+            <label class="w350">Your Preferred Day of Appointment</label>
+            <select name="ddlWeekDay" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ddlWeekDay\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlWeekDay" style="width:137px;">
+	<option selected="selected" value="--Select--">--Select--</option>
+	<option value="Monday">Monday</option>
+	<option value="Tuesday">Tuesday</option>
+	<option value="Wednesday">Wednesday</option>
+	<option value="Thursday">Thursday</option>
+	<option value="Friday">Friday</option>
+	<option value="Saturday">Saturday</option>
+
+</select>
+        </div>
+		</div>
+            
+         <div style="clear:both"></div>
+ 
+          </div>
+          
+              <div id="divLoader" style="display:none;">
+          <div class="tabContent">
+       <div class="whiteBG">
+       <div align="center"><img src="../images/icon_loader.gif" /></div>
+       </div>
+          </div>
+          <div class="tabBtm"><div class="tabBtm1"></div></div>
+          </div>   
+          
+           <div id="divDocDynamicData" style="display:block;">
+        
+       <div class="tabContent">
+		<div class="whiteBG" style="padding:5px 10px 15px 15px;">
+		
+		     <div id="divDoctorSchedule" class="drSchdl"><table width='100%' cellspacing='0' cellpadding='0' class='docTbl' style='margin-bottom:5px'><tbody><tr><th width='14%'>Room No.</th><th width='14%'>Monday</th><th width='14%'>Tuesday</th><th width='14%'>Wednesday</th><th width='14%'>Thursday</th><th width='14%'>Friday</th><th width='14%'>Saturday</th></tr><tr><td>1108</td><td>09:30-14:30 <br> -- </br></td><td>-- <br> 15:00-17:30 </br></td><td>09:30-11:30 <br> F 11:30-13:30 </br></td><td>09:30-13:30 <br> -- </br></td><td>09:30-13:30 <br> -- </br></td><td>-- <br> 14:00-16:00 </br></td></tr></tbody></table> <p style='padding-bottom:10px;color:#FD9E5F;font-size:11px;padding-left: 10px;'><strong>F</strong> - Free OPD</p></div>
+	        
+		</div>
+		 
+		<div class="whiteBG" style="padding:5px 10px 15px 15px;">
+		    <div id="divDoctorScheduleDetails" class="drPrfl" style="font-size:11px;"><table width='100%' cellspacing='0' cellpadding='0' class='docTbl'><tbody><tr><td width='15%'><img src='../Handler.ashx?ID=220'  width='84px' height='84px' alt='Dr. Rucha Kaushik'/></td><td width='25%'><strong>Dr. Rucha Kaushik</strong><br />MBBS, M.S.</td><td style='width:35%'><strong>Areas Of Expertise</strong><br /><ul>
+	<li>
+		Breast Cancer Surgery</li>
+	<li>
+		Surgery Following Neo-Adjuvant Chemotherapy</li>
+	<li>
+		Breast Reconstruction &amp; Oncoplasty</li>
+	<li>
+		Sentinel Lymph Node Biopsy</li>
+</ul>
+</td><td><strong>Contact Details</strong><br/>E-Mail - <a href='mailto:info@hindujahospital.com'>info@hindujahospital.com</a><br />Tel - 022 â?? 24449199 / 24452222 / 24451515<br /></td></tr></tbody></table></div>
+		  
+		  </div>
+		  </div>
+		  <div class="tabBtm"><div class="tabBtm1"></div></div>
+		  </div>
+		</div>
+	
+
+
+		<div id="divMain" style="display:block;">
+		
+		
+	<h4 class="fullForm">Preferred Date of Appointment</h4>
+	<div class="padLR">
+	<div class="frm">          
+	
+            <div class="formFld FL w275">
+              <label class="w30">1st <span class="red">*</span> : </label>
+              <div class="calenderDiv"><input name="txtDate1" type="text" id="txtDate1" style="width:160px;" class="calendar required" /></div>
+			  <div class="FL" style="display:none"><img id="calImg" src="../images/calendar.gif" style="padding-left: 5px;" alt="Calender" title="Calender" border="0" />
+			  
+			  </div>
+			<div class="CL"></div>
+            </div>
+			
+			
+			<div class="formFld FL w275">
+              <label class="w30">2nd : </label>
+              <div class="calenderDiv"><input name="txtDate2" type="text" id="txtDate2" style="width:160px;" class="calendar" /></div>
+			  <div class="FL"  style="display:none"><img id="calImg2" src="../images/calendar.gif" style="padding-left: 5px;" alt="Calender" title="Calender" border="0" /></div>
+			<div class="CL"></div>
+            </div>
+			
+			<div class="formFld FL w275">
+              <label class="w30">3rd : </label>
+             <div class="calenderDiv"><input name="txtDate3" type="text" id="txtDate3" style="width:160px;" class="calendar" /></div>
+			  <div class="FL"  style="display:none"><img id="calImg3" src="../images/calendar.gif" style="padding-left: 5px;" alt="Calender" title="Calender" border="0" /></div>
+			<div class="CL"></div>
+            </div>
+			
+			<div  class="FL" style="text-align:left;height:2px;margin-bottom:10px;width:315px;"><div style="padding-left: 40px;"><span id="lblDate1"></span></div>
+	<div id="advice-required-txtDate1" class="custom-advice" style="display: none;padding-left:40px;">Please select Date</div></div>
+				  <div  class="FL" style="text-align:left;height:2px;margin-bottom:10px;width:275px;"><span id="lblDate2"></span></div>
+				  <div  class="FL" style="text-align:left;height:2px;margin-bottom:10px;width:200px;"><span id="lblDate3"></span></div>
+			<div class="CL"></div>
+            </div>
+	</div>
+	
+	<h4 class="fullForm">Personal Details </h4>			
+		<div class="frm career"> 
+		  
+            
+		
+		  <div class="frmcolm"  style="background:url(../images/dashed-line.gif) 407px repeat-y; padding-left:20px">
+		  
+		  <div class="fullformFld ">
+            <label class="w350"> Name of Patient <span class="red">*</span></label>
+            <input name="txtName" type="text" id="txtName" class="required validate-alpha " />
+            <div id="advice-required-txtName" class="custom-advice" style="display: none;">Please type in Name</div>
+            </div>
+            
+		  <div class="fullformFld ">
+            <label class="w350"> Name of Person Taking The Appointment <span class="red">*</span></label>
+            <input name="txtPersonName" type="text" id="txtPersonName" class="required validate-alpha " />
+            <div id="advice-required-txtPersonName" class="custom-advice" style="display: none;">Please type in Name of Person Taking The Appointment</div>
+			<br clear="left" />
+          </div>
+          <div class="fullformFld ">
+            <label class="w350">Relationship with Patient <span class="red">*</span></label>
+            <input name="txtRelationshipPatient" type="text" id="txtRelationshipPatient" class="required validate-alpha" />
+               <div id="advice-required-txtRelationshipPatient" class="custom-advice" style="display: none;">Please type in Relationship with Patient</div>
+            <br clear="left" />
+          </div>
+		 
+		  <div class="fullformFld ">
+            <label class="w350">Gender</label>
+            <table id="rblstGender" class="radioBtn">
+	<tr>
+		<td><input id="rblstGender_0" type="radio" name="rblstGender" value="Male" checked="checked" /><label for="rblstGender_0">Male</label></td><td><input id="rblstGender_1" type="radio" name="rblstGender" value="Female" /><label for="rblstGender_1">Female</label></td>
+	</tr>
+</table>
+            <br clear="left" />
+          </div>
+		 
+		  </div>
+		  
+		  <div class="frmcolm">
+		   <div class="fullformFld ">
+            <label class="w350">Contact Mobile Number <span class="red">*</span></label>
+            <input name="txtMobile" type="text" id="txtMobile" class="required validate-number" />
+            <div id="advice-required-txtMobile" class="custom-advice" style="display: none;">Please type in Contact Mobile Number</div>
+            <br clear="left" />
+          </div>
+		  <div class="fullformFld ">
+            <label class="w350">Contact Phone</label>
+            <input name="txtPhone" type="text" id="txtPhone" class="validate-number" />
+            <br clear="left" />
+          </div>
+		  <div class="fullformFld ">
+            <label class="w350">Contact Email id <span class="red">*</span></label>
+            <input name="txtEmail" type="text" id="txtEmail" class="required validate-email" />
+                <div id="advice-required-txtEmail" class="custom-advice" style="display: none;">Please type in Email-ID</div>
+            <br clear="left" />
+          </div>
+		  
+		  
+		  <div class="fullformFld ">
+            <label class="w350">Country <span class="red">*</span></label>
+            <select name="ddlCountry" id="ddlCountry" class="validate-selection" style="width:355px;">
+	<option value="-1">--Select--</option>
+	<option value="1">Andorra</option>
+	<option value="2">United Arab Emirates</option>
+	<option value="3">Afghanistan</option>
+	<option value="4">Antigua and Barbuda</option>
+	<option value="5">Anguilla</option>
+	<option value="6">Albania</option>
+	<option value="7">Armenia</option>
+	<option value="8">Netherlands Antilles</option>
+	<option value="9">Angola</option>
+	<option value="10">Antarctica</option>
+	<option value="11">Argentina</option>
+	<option value="12">American Samoa</option>
+	<option value="13">Austria</option>
+	<option value="14">Australia</option>
+	<option value="15">Aruba</option>
+	<option value="16">Azerbaijan</option>
+	<option value="17">Bosnia and Herzegovina</option>
+	<option value="18">Barbados</option>
+	<option value="19">Bangladesh</option>
+	<option value="20">Belgium</option>
+	<option value="21">Burkina Faso</option>
+	<option value="22">Bulgaria</option>
+	<option value="23">Bahrain</option>
+	<option value="24">Burundi</option>
+	<option value="25">Benin</option>
+	<option value="26">Bermuda</option>
+	<option value="27">Brunei Darussalam</option>
+	<option value="28">Bolivia</option>
+	<option value="29">Brazil</option>
+	<option value="30">The Bahamas</option>
+	<option value="31">Bhutan</option>
+	<option value="32">Bouvet Island</option>
+	<option value="33">Botswana</option>
+	<option value="34">Belarus</option>
+	<option value="35">Belize</option>
+	<option value="36">Canada</option>
+	<option value="37">Cocos (Keeling) Islands</option>
+	<option value="38">Congo, Democratic Republic of the</option>
+	<option value="39">Central African Republic</option>
+	<option value="40">Congo, Republic of the</option>
+	<option value="41">Switzerland</option>
+	<option value="42">Cote d&#39;Ivoire</option>
+	<option value="43">Cook Islands</option>
+	<option value="44">Chile</option>
+	<option value="45">Cameroon</option>
+	<option value="46">China</option>
+	<option value="47">Colombia</option>
+	<option value="48">Costa Rica</option>
+	<option value="49">Cuba</option>
+	<option value="50">Cape Verde</option>
+	<option value="51">Christmas Island</option>
+	<option value="52">Cyprus</option>
+	<option value="53">Czech Republic</option>
+	<option value="54">Germany</option>
+	<option value="55">Djibouti</option>
+	<option value="56">Denmark</option>
+	<option value="57">Dominica</option>
+	<option value="58">Dominican Republic</option>
+	<option value="59">Algeria</option>
+	<option value="60">Ecuador</option>
+	<option value="61">Estonia</option>
+	<option value="62">Egypt</option>
+	<option value="63">Western Sahara</option>
+	<option value="64">Eritrea</option>
+	<option value="65">Spain</option>
+	<option value="66">Ethiopia</option>
+	<option value="67">Finland</option>
+	<option value="68">Fiji</option>
+	<option value="69">Falkland Islands (Islas Malvinas)</option>
+	<option value="70">Micronesia, Federated States of</option>
+	<option value="71">Faroe Islands</option>
+	<option value="72">France</option>
+	<option value="73">France, Metropolitan</option>
+	<option value="74">Gabon</option>
+	<option value="75">Grenada</option>
+	<option value="76">Georgia</option>
+	<option value="77">French Guiana</option>
+	<option value="78">Guernsey</option>
+	<option value="79">Ghana</option>
+	<option value="80">Gibraltar</option>
+	<option value="81">Greenland</option>
+	<option value="82">The Gambia</option>
+	<option value="83">Guinea</option>
+	<option value="84">Guadeloupe</option>
+	<option value="85">Equatorial Guinea</option>
+	<option value="86">Greece</option>
+	<option value="88">Guatemala</option>
+	<option value="89">Guam</option>
+	<option value="90">Guinea-Bissau</option>
+	<option value="91">Guyana</option>
+	<option value="92">Hong Kong (SAR)</option>
+	<option value="93">Heard Island and McDonald Islands</option>
+	<option value="94">Honduras</option>
+	<option value="95">Croatia</option>
+	<option value="96">Haiti</option>
+	<option value="97">Hungary</option>
+	<option value="98">Indonesia</option>
+	<option value="99">Ireland</option>
+	<option value="100">Israel</option>
+	<option value="101">Man, Isle of</option>
+	<option selected="selected" value="102">India</option>
+	<option value="103">British Indian Ocean Territory</option>
+	<option value="104">Iraq</option>
+	<option value="105">Iran</option>
+	<option value="106">Iceland</option>
+	<option value="107">Italy</option>
+	<option value="108">Jersey</option>
+	<option value="109">Jamaica</option>
+	<option value="110">Jordan</option>
+	<option value="111">Japan</option>
+	<option value="112">Kenya</option>
+	<option value="113">Kyrgyzstan</option>
+	<option value="114">Cambodia</option>
+	<option value="115">Kiribati</option>
+	<option value="116">Comoros</option>
+	<option value="117">Saint Kitts and Nevis</option>
+	<option value="118">Korea, North</option>
+	<option value="119">Korea, South</option>
+	<option value="120">Kuwait</option>
+	<option value="121">Cayman Islands</option>
+	<option value="122">Kazakhstan</option>
+	<option value="123">Laos</option>
+	<option value="124">Lebanon</option>
+	<option value="125">Saint Lucia</option>
+	<option value="126">Liechtenstein</option>
+	<option value="127">Sri Lanka</option>
+	<option value="128">Liberia</option>
+	<option value="129">Lesotho</option>
+	<option value="130">Lithuania</option>
+	<option value="131">Luxembourg</option>
+	<option value="132">Latvia</option>
+	<option value="133">Libya</option>
+	<option value="134">Morocco</option>
+	<option value="135">Monaco</option>
+	<option value="136">Moldova</option>
+	<option value="137">Madagascar</option>
+	<option value="138">Marshall Islands</option>
+	<option value="140">Mali</option>
+	<option value="141">Burma</option>
+	<option value="142">Mongolia</option>
+	<option value="143">Macao</option>
+	<option value="144">Northern Mariana Islands</option>
+	<option value="145">Martinique</option>
+	<option value="146">Mauritania</option>
+	<option value="147">Montserrat</option>
+	<option value="148">Malta</option>
+	<option value="149">Mauritius</option>
+	<option value="150">Maldives</option>
+	<option value="151">Malawi</option>
+	<option value="152">Mexico</option>
+	<option value="153">Malaysia</option>
+	<option value="154">Mozambique</option>
+	<option value="155">Namibia</option>
+	<option value="156">New Caledonia</option>
+	<option value="157">Niger</option>
+	<option value="158">Norfolk Island</option>
+	<option value="159">Nigeria</option>
+	<option value="160">Nicaragua</option>
+	<option value="161">Netherlands</option>
+	<option value="162">Norway</option>
+	<option value="163">Nepal</option>
+	<option value="164">Nauru</option>
+	<option value="165">Niue</option>
+	<option value="166">New Zealand</option>
+	<option value="167">Oman</option>
+	<option value="168">Panama</option>
+	<option value="169">Peru</option>
+	<option value="170">French Polynesia</option>
+	<option value="171">Papua New Guinea</option>
+	<option value="172">Philippines</option>
+	<option value="173">Pakistan</option>
+	<option value="174">Poland</option>
+	<option value="175">Saint Pierre and Miquelon</option>
+	<option value="176">Pitcairn Islands</option>
+	<option value="177">Puerto Rico</option>
+	<option value="178">Palestinian Territory, Occupied</option>
+	<option value="179">Portugal</option>
+	<option value="180">Palau</option>
+	<option value="181">Paraguay</option>
+	<option value="182">Qatar</option>
+	<option value="183">R&#233;union</option>
+	<option value="184">Romania</option>
+	<option value="185">Russia</option>
+	<option value="186">Rwanda</option>
+	<option value="187">Saudi Arabia</option>
+	<option value="188">Solomon Islands</option>
+	<option value="189">Seychelles</option>
+	<option value="190">Sudan</option>
+	<option value="191">Sweden</option>
+	<option value="192">Singapore</option>
+	<option value="193">Saint Helena</option>
+	<option value="194">Slovenia</option>
+	<option value="195">Svalbard</option>
+	<option value="196">Slovakia</option>
+	<option value="197">Sierra Leone</option>
+	<option value="198">San Marino</option>
+	<option value="199">Senegal</option>
+	<option value="200">Somalia</option>
+	<option value="201">Suriname</option>
+	<option value="202">S&#227;o Tom&#233; and Pr&#237;ncipe</option>
+	<option value="203">El Salvador</option>
+	<option value="204">Syria</option>
+	<option value="205">Swaziland</option>
+	<option value="206">Turks and Caicos Islands</option>
+	<option value="207">Chad</option>
+	<option value="208">French Southern and Antarctic Lands</option>
+	<option value="209">Togo</option>
+	<option value="210">Thailand</option>
+	<option value="211">Tajikistan</option>
+	<option value="212">Tokelau</option>
+	<option value="213">Turkmenistan</option>
+	<option value="214">Tunisia</option>
+	<option value="215">Tonga</option>
+	<option value="216">East Timor</option>
+	<option value="217">Turkey</option>
+	<option value="218">Trinidad and Tobago</option>
+	<option value="219">Tuvalu</option>
+	<option value="220">Taiwan</option>
+	<option value="221">Tanzania</option>
+	<option value="222">Ukraine</option>
+	<option value="223">Uganda</option>
+	<option value="224">United Kingdom</option>
+	<option value="226">United States</option>
+	<option value="227">Uruguay</option>
+	<option value="228">Uzbekistan</option>
+	<option value="229">Holy See (Vatican City)</option>
+	<option value="230">Saint Vincent and the Grenadines</option>
+	<option value="231">Venezuela</option>
+	<option value="232">British Virgin Islands</option>
+	<option value="233">Virgin Islands</option>
+	<option value="234">Vietnam</option>
+	<option value="235">Vanuatu</option>
+	<option value="236">Wallis and Futuna</option>
+	<option value="237">Samoa</option>
+	<option value="238">Yemen</option>
+	<option value="239">Mayotte</option>
+	<option value="240">Yugoslavia</option>
+	<option value="241">South Africa</option>
+	<option value="242">Zambia</option>
+	<option value="243">Zimbabwe</option>
+
+</select>
+            <br clear="left" />
+          </div>
+		  
+		  
+		  </div>
+		  
+		  
+		  
+		<div class="CL"></div>
+
+	</div>
+	
+	
+	
+	<div>
+	<div class="width50 FL">
+	<h4 class="fullForm">Any Other Queries</h4>
+	<div class="frm"> 
+		  <div class="frmcolm"  style="background:url(../images/dashed-line.gif) 407px repeat-y; padding-left:20px; float:none">
+		  
+		  <div class="fullformFld ">
+		    <textarea name="txtQuery" rows="17" cols="24" id="txtQuery" style="border-width:2px;border-style:solid;">
+</textarea>
+            </div>
+            
+		  </div>
+		  </div>
+
+
+	</div>
+	
+	
+	<div class="width50 FL">
+	<h4 class="fullForm">Terms and Conditions </h4>
+	<div class="frm  padLR">
+	 <div class="terms">
+	 <div class="termswhiteBG"><div class="scroll-pane" style="height:200px;">
+	 <ul class="termsList">
+                    <li><b>Indicating your preferred date of appointment does not   indicate confirmation of appointment. We shall however, accommodate you   as close to your preferred day and time and get back to you shortly with   the confirmation either on the mentioned phone/email.</b></li><li>Final confirmation of appointment is subject to payment of   consultation fees, as may be applicable at that given point of time.</li><li>P. D. Hinduja Hospital, its employees, any physician or   clinician with whom an appointment has been made by use of this website   has not agreed to provide the undersigned with any medical advice,   diagnostic or therapeutic procedure until the undersigned has registered   in person at P. D. Hinduja Hospital.</li>
+                    <li>Any dispute or claim (including injury claims) related to   health care services received from P. D. Hinduja Hospital that is not resolved   by mutual agreement is subject to law  and the jurisdiction of the   appropriate court</li><li>The fields marked <span class="red">*</span> are mandatory. </li>
+                    <li>For any other query which you might have, mail us at <a href="mailto:info@hindujahospital.com">info@hindujahospital.com</a></li><li>For appointments call us on 022-39818181/67668181</li></ul>
+					</div>
+	
+	 </div>
+	 <br />
+	 <input type="checkbox" name="checkbox" value="checkbox" id="chckTerms" class="required" style="width:20px;border:none;"/>
+          <span style="font-size:11px;">I agree to the terms and conditions</span>
+          <div id="advice-required-chckTerms" class="custom-advice" style="display: none;padding-left:0px;">Please accept terms and conditions</div>				
+	 </div>
+	</div>
+		  
+		  
+</div>
+<div class="CL"></div>
+</div>
+	
+
+    
+	<h4 class="fullForm">Type characters in the picture below</h4>
+	
+	<div class="frm padLR career">
+	<div class="fullformFld">
+            
+             <img src="../JpegImage.aspx" title="Type characters shown in the picture" alt="Type characters shown in the picture"/>  
+            <br clear="left" />
+          </div>
+          
+            <div class="fullformFld ">
+              <div class="FL"><input name="txtCapcha" type="text" id="txtCapcha" tabindex="23" class="inputs required" />
+              <div id="advice-required-txtCapcha" class="custom-advice" style="display: none;">Please type in Captcha Code</div>                   <br />
+               Letters are case-sensitive 
+              
+              </div>
+             
+              <div class="FL"><input type="image" name="imgbtnChengeCapche" id="imgbtnChengeCapche" src="../images/help.gif" alt="Help" style="height:20px;width:20px;" /></div>
+                 
+            <br clear="left" />
+          </div>
+		      
+			  
+			  
+        </div>
+		<div class="submit"><input type="image" name="btnSubmit" id="btnSubmit" alt="" src="../images/submit01.gif" onclick="var valid = new Validation(&#39;form1&#39;, {immediate : true, onFormValidate : formCallback});" style="height:23px;width:60px;" />
+		<br /><span id="lblMsg" style="color:#F48639;font-weight:bold;"></span>						
+		</div>
+	</div>
+		
+		
+		</div>
+	</div>
+	
+	
+		
+		
+		
+		
+	    </div>
+	  </div>
+      
+    </div>
+
+<!--Footer-->
+<div id="footerOuter">
+    <div class="footerIconsContainer">
+            <div class="footerIcons">
+            <ul>
+                <li class="footerIconsFirst"><a onclick="_gaq.push(['_trackEvent', 'linkedin', 'click']);" href="http://www.linkedin.com/company/hinduja-hospital" class="linkedIn" target="_blank">Follow us on <span>Linked In</span></a></li>
+                <li><a onclick="_gaq.push(['_trackEvent', 'Youtube', 'click']);" href="http://www.youtube.com/user/HindujaHospitalMRC" class="youTube" target="_blank">Watch us on <span>You Tube</span></a></li>
+                <li><a onclick="_gaq.push(['_trackEvent', 'Twitter', 'click']);" href="https://twitter.com/HospitalHinduja" class="twitter" target="_blank">Follow us on <span>Twitter</span></a></li>
+                <li><a onclick="_gaq.push(['_trackEvent', 'Facebook', 'click']);" href="http://www.facebook.com/HindujaHospital" class="facebook" target="_blank">Like Us on <span>Facebook</span></a></li>
+                <li><a href="http://hindujahospital.com/mobile/" class="mobile" target="_blank" title="http://hindujahospital.com/mobile/">Visit us on <span>Mobile</span></a></li>
+                <li class="footerIconsLast"><a href="https://www.instagram.com/hindujahospital" class="instagramicon" target="_blank" title="https://www.instagram.com/hindujahospital">Follow us on <span>Instagram</span></a></li>
+            </ul>
+            <div class="CL"></div>
+            </div>
+        </div>
+  <div id="footer">
+    <div class="container1 FL">
+      <ul>
+        <li><a href="https://www.hindujahospital.com/for-patients/medical-insurance-tpa.html">Our Empaneled TPAs</a></li>
+       <!-- <li><a href="#">Our Empaneled Corporates</a></li>-->
+        <li><a href="https://www.hindujahospital.com/for-patients/tell-us-how-we-fared.aspx">Tell Us How We Fared</a></li>
+      </ul>
+    </div>
+    <div class="container1 FL marginL">
+      <ul>
+        <li><a href="https://www.hindujahospital.com/sso/" target="_blank">Surgical Solutions for Obesity </a></li>
+        <li><a href="https://www.hindujahospital.com/hindujaivfcentre/" target="_blank">Hinduja IVF Centre </a></li>
+        <li><a href="https://www.hindujahospital.com/sss/" target="_blank">Short Stay Service</a></li>
+        <li><a href="https://www.hindujahospital.com/preventive-healthcare/" target="_blank">Preventive Health Care</a></li>
+        <li><a href="https://www.hindujahospital.com/for-patients/care-home.html">Care@Home</a></li>
+      </ul>
+    </div>
+    <div class="container1 FL marginL width165 borderR">
+      <ul>
+        <li><a href="https://www.hindujahospital.com/communityportal/events/current-events.aspx">Medical Conferences &amp; Events</a></li>
+        <li><a href="https://www.hindujahospital.com/careers/default.aspx">Careers</a></li>
+        <li><a href="https://www.hindujahospital.com/communityportal/publicevents/public-events.aspx" target="_blank">Public Education Series</a></li>
+        <li><a href="https://www.hindujahospital.com/for-patients/downloads.aspx">Free Downloads</a></li>
+      </ul>
+    </div>
+    <div class="subscribe">
+      <div class="borderBottom">
+        <h3>E-newsletter</h3>
+        <p class="btl">Subscribe to e-newsletter</p>
+        <div>
+          <input id="txtEmail1" name="" type="text" class="txtBox" maxlength="30"/>
+        </div>
+        <div><a href="#" onclick="validate_newsletter();enewsletter();" class="btnGo"></a></div>
+        <a href="https://www.hindujahospital.com/communityportal/newsletter/newsletter.aspx" target="_blank"><span class="archive">E-newsletter Archives </span></a>
+        <p>&nbsp;</p>
+      </div>
+      <!--<div class="media">
+         <div id="youtube"><a href="http://www.youtube.com/user/HindujaHospitalMRC" onClick="_gaq.push(['_trackEvent', 'Youtube', 'click']);">Youtube</a></div>
+        <div id="faceBook"><a href="http://www.facebook.com/HindujaHospital" onClick="_gaq.push(['_trackEvent', 'Facebook', 'click']);">Facebook</a></div>
+        <div id="twitter"> <a href="http://twitter.com/wellnessmumbai" onClick="_gaq.push(['_trackEvent', 'Twitter', 'click']);">Twitter</a></div>
+        <div id="linkedin"><a href="http://www.linkedin.com/company/hinduja-hospital" onClick="_gaq.push(['_trackEvent', 'linkedin', 'click']);">Linkedin</a></div>
+        <div class="CL"></div>
+      </div>-->
+      <div class="privacyP">
+        <div class="">P. D. Hinduja Hospital Â© 2014 | <a href="https://www.hindujahospital.com/privacy.html">Privacy Policy</a></div>
+        <div class="footerBottomLink">Website by HGS Interactive an <a target="_blank" href="http://www.hgsinteractive.com/">Interactive agency</a></div>
+        <div class="CL"></div>
+      </div>
+    </div>
+  </div>
+  <div class="staticBottom">
+  <div class="links">
+    <div id="footerInn1"><a href="https://www.hindujahospital.com/for-patients/doctors.aspx">Find A Doctor</a></div>
+    <div id="footerInn2"><a href="https://www.hindujahospital.com/for-patients/schedule.aspx">Doctor's Schedule</a></div>
+    <div id="footerInn3"><a href="https://www.hindujahospital.com/contact-us/enquiry.aspx" class="cursor">Enquiry</a></div>
+    <div id="footerInn4"><a href="https://www.hindujahospital.com/for-patients/appointments.aspx">Take an Appointment</a></div>
+    <div id="footerInn5" style="position:relative" class="helplineOver"><a href="javascript:void(0)" class="cursor">24/7 Helpline</a>
+    <div class="helpLineHover" style="display:none">
+    <div class="helpInner">
+    <p class="title">24/7 Helpline</p>
+    <p>022-24449199</p><p>022-24452222</p><p>022-24451515</p>
+    <p class="title marg10">Appointment Helpline</p>
+    <p>022-3981 8181</p><p>022-6766 8181</p>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="https://www.hindujahospital.com/js/body.js"></script> 
+  <script type="text/javascript" src="https://www.hindujahospital.com/ajaxscript/enewsletter.js"></script> 
+  
+</div>
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 970141262;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/970141262/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+  <script type="text/javascript">
+      function formCallback(result, form) {
+          //		window.status = "valiation callback for form '" + form.id + "': result = " + result;
+      }
+	
+	
+</script>
+</form>
+</body>
+</html>
